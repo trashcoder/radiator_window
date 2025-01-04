@@ -76,7 +76,7 @@ const activateRadiator = (room:GroupType) => {
 const checkGroup = (group:GroupType[]):boolean => {
     let returnValue:boolean = false;
 
-    for (let room of group) {
+    for (const room of group) {
         if (checkIsWindowOpen(room)) {
             returnValue = true;
         }
@@ -87,8 +87,8 @@ const checkGroup = (group:GroupType[]):boolean => {
 
 const checkAllWindows = () => {
 
-    let northOpen = checkGroup(northGroup);
-    let southOpen = checkGroup(southGroup);
+    const northOpen = checkGroup(northGroup);
+    const southOpen = checkGroup(southGroup);
     if (northOpen && southOpen) {
         deactivateAllRadiators(house);
         return;
@@ -97,7 +97,7 @@ const checkAllWindows = () => {
         activateAllRadiators(house);
         return;
     }
-    for (let room of house) {
+    for (const room of house) {
         if (checkIsWindowOpen(room)) {
             deactivateRadiator(room);
         } else {
