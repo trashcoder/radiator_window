@@ -74,14 +74,12 @@ const activateRadiator = (room:GroupType) => {
 }
 
 const checkGroup = (group:GroupType[]):boolean => {
-    let returnValue:boolean = false;
-
     for (const room of group) {
         if (checkIsWindowOpen(room)) {
-            returnValue = true;
+            return true;
         }
     }
-    return returnValue;
+    return false;
 }
 
 
