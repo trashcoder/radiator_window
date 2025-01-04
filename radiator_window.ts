@@ -60,7 +60,7 @@ const deactivateAllRadiators = (rooms:GroupType[]) => {
 }
 
 const activateAllRadiators = (rooms:GroupType[]) => {
-    for (let room of rooms) {
+    for (const room of rooms) {
         activateRadiator(room);
     }
 }
