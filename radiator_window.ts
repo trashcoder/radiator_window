@@ -54,7 +54,7 @@ const checkIsWindowOpen = (room : GroupType):boolean => {
 }
 
 const deactivateAllRadiators = (rooms:GroupType[]) => {
-    for (let room of rooms) {
+    for (const room of rooms) {
         deactivateRadiator(room);
     }
 }
